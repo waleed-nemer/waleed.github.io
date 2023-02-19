@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmode</title>
+</head>
+<body id="darkmode">
+
+    <div id="theme">
+        <div onclick="setDarkMode(true)" id="darkBtn">
+        <span>Dark</span>
+    </div>
+    <div onclick="setDarkMode(false)" id="lightBtn" class="is-hidden">
+    </div>
+    </div>
+    <style type="text/css">
+        body.darkmode {
+            background-color: rgb(57,57,57);
+            color: rgb(277,277,277);
+        }
+        #theme:hover{
+            cursor: pointer;
+        }
+        .is-hidden {
+            display: none;
+        }
+    </style>
+    <h1>Hello world!</h1>
+    <p>waleed nemer waleed nemer waleed nemer waleed nemer waleed nemer waleed nemer waleed nemer waleed 
+    waleed nemer waleed nemer waleed nemer waleed nemer waleed nemerwaleed nemernemer waleed nemer waleed
+    waleed nemer waleed nemer waleed nemerwaleed nemer waleed nemer waleed nemer nemer waleed nemer waleed nemer
+    waleed nemer waleed nemer waleed nemer waleed nemer waleed nemerwaleed nemernemer waleed nemer waleed
+    waleed nemer waleed nemer waleed nemer waleed nemer waleed nemerwaleed nemernemer waleed nemer waleed
+    waleed nemer waleed nemer waleed nemer waleed nemer waleed nemerwaleed nemernemer waleed nemer waleed
+    waleed nemer waleed nemer waleed nemer waleed nemer waleed nemerwaleed nemernemer waleed nemer waleed</p>
+
+    <script type="text/javascript">
+        if(localStorage.getItem('preferredTheme') == 'dark'){
+            setDarkMode(true)
+            }
+        function setDarkMode(isDark){
+            var darkBtn = document.getElementById('darkBtn')
+            var ligthkBtn = document.getElementById('lightBtn')
+
+            if (isdark) {
+                lightkBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme','dark');
+    
+            } 
+            else {
+                lightkBtn.style.display = 'none'
+                darkBtn.style.display = 'block'
+                localStorage.removeItem('preferredTheme');
+
+            }
+
+            document.body.classList.toggle('darkmode');
+        }
+    </script>
+</body>
+</html>
